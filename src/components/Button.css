@@ -1,0 +1,117 @@
+.button-custom {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 16px;
+    color: #FAFAFA;
+    border-radius: 5px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-blue {
+    background-color: #007bff;
+}
+
+.btn-blue:hover {
+    background-color: #0069d9;
+    color: #FFF;
+}
+
+.btn-red {
+    background-color: #dc3545;
+}
+.btn-red:hover {
+    background-color: #c82333;
+    color: #FFF;
+}
+
+.btn-yellow {
+    background-color: #ffc107;
+}
+.btn-yellow:hover {
+    background-color: #e0a800;
+    color: #FFF;
+}
+
+.btn-green {
+    background-color: #28a745;
+}
+.btn-green:hover {
+    background-color: #218838;
+    color: #FFF;
+}
+
+.btn-gray {
+    background-color: #6c757d;
+}
+.btn-gray:hover {
+    background-color: #5a6268;
+    color: #FFF;
+}
+
+.btn-transparent {
+    background-color: #FFF;
+    color: #000;
+}
+
+
+.button--border-thin {
+    border: 1px solid #37474f;
+}
+
+/* Button ujarak */
+.button--ujarak::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #37474f;
+    z-index: -1;
+    opacity: 0;
+    transform: scale3d(0.7, 1, 1);
+    transition: transform 0.4s, opacity 0.4s;
+}
+  
+.button--ujarak {
+    transition: border-color 0.4s, color 0.4s;
+}
+.button--ujarak:hover {
+    color: #fff;
+    
+}
+.button--ujarak:hover::before {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+/* Button Mirror */
+.button--mirror {
+    background-color: #e1332d;
+    color: #FFF;
+}
+.button--mirror::after {
+    content:'';
+    background: #FFF;
+    height: 155px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: -75px;
+    opacity: .2;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: -1;
+}
+
+.button--mirror:hover::after {
+    left: 120%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}

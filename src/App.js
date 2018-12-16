@@ -8,7 +8,7 @@ import TopMenu from './components/TopMenu';
 
 import Index from './pages/Index';
 import Users from './pages/Users';
-
+import Components from './pages/Components';
 class App extends Component {
   render() {
     return (
@@ -18,6 +18,7 @@ class App extends Component {
 
           <Route path="/" exact component={Index}></Route>
           <Route path="/users/" exact component={Users}></Route>
+          <Route path="/components/" exact component={Components}></Route>
         </div>
       </Router>
     );
