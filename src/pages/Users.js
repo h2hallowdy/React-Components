@@ -11,19 +11,16 @@ class Users extends Component {
         this.state = {
             users: [
                 {
-                    number: "02",
                     name: "Nguyen, Xuan Hoang",
                     userId: "11848949",
-                    ticketNumber: 0
+                    ticketNumber: 9
                 },
                 {
-                    number: "01",
                     name: "Jacob",
                     userId: "11848949",
-                    ticketNumber: 45
+                    ticketNumber: 50
                 },
                 {
-                    number: "03",
                     name: "Nguyen Van Nhat",
                     userId: "1234567",
                     ticketNumber: 40
@@ -35,9 +32,14 @@ class Users extends Component {
 
     render() {
         const { users } = this.state;
+        const usersSort = users.sort(function(user1, user2) {
+            return user2.ticketNumber - user1.ticketNumber;
+        });
+        usersSort.map((user, index) => { return user.number = (index + 1) });
         return (
             <Container>
-                {users.map((user, index) => (
+                {usersSort.map((user, index) => (
+
                     <Row>
                         <Col className="col-md-12">
                             <UserInfor 
