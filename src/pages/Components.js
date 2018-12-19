@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Button from '../components/Button';
+import AwesomeImage from '../components/AwesomeImage';
+import HoverOpacity from '../components/HoverOpacity';
+
+const HoverOpacityAwesomeImage = HoverOpacity(AwesomeImage, 0.8);
 class Components extends Component {
     render() {
         return (
@@ -53,6 +57,22 @@ class Components extends Component {
                     <Col md={3} xs={12} className="mt-2 mb-2">
                         <Button styleBtn="mirror">Button</Button>
                         <span style={{ marginLeft: 3 }}>Mirror</span>
+                    </Col>
+                </Row>
+                <Row className="border-bottom mt-3 mb-2">
+                    <Col md={12}>
+                        <h3>Awesome Image</h3>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md={12} style={{display: "flex", justifyContent:"center", alignItems:"center"}}>
+                        <HoverOpacityAwesomeImage src="https://picsum.photos/200/300" />
+                        
+                    </Col>
+                </Row>
+                <Row className="border-bottom mt-3 mb-2">
+                    <Col md={12}>
+                        <h3>Awesome Image</h3>
                     </Col>
                 </Row>
             </Container>
