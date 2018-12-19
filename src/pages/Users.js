@@ -11,16 +11,22 @@ class Users extends Component {
         this.state = {
             users: [
                 {
-                    number: 2,
+                    number: "02",
                     name: "Nguyen, Xuan Hoang",
                     userId: "11848949",
                     ticketNumber: 0
                 },
                 {
-                    number: 1,
+                    number: "01",
                     name: "Jacob",
                     userId: "11848949",
                     ticketNumber: 45
+                },
+                {
+                    number: "03",
+                    name: "Nguyen Van Nhat",
+                    userId: "1234567",
+                    ticketNumber: 40
                 }
 
             ]
@@ -34,11 +40,8 @@ class Users extends Component {
                 {users.map((user, index) => (
                     <Row>
                         <Col className="col-md-12">
-                            <UserInfor
-                                number={user.number}
-                                name={user.name}
-                                userId={user.userId}
-                                ticketNumber={user.ticketNumber} />
+                            <UserInfor 
+                            user={user}/>
                         </Col>
 
                     </Row>

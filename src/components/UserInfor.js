@@ -6,10 +6,10 @@ import UserIcon from '../img/man-user.svg';
 class UserInfor extends Component {
 
 	render() {
-		var { number, name, userId, ticketNumber } = this.props;
+		var { user } = this.props;
 		let className = "ranking";
 		let url = UserIcon;
-		let num = parseInt(number);
+		let num = parseInt(user.number);
 		switch (num) {
 			case 1:
 				className += " border-red";
@@ -31,12 +31,12 @@ class UserInfor extends Component {
 				<img className="king-img"
 					src={url} width="32" height="32"
 					alt="user-status" />
-				<span className={className}>{number}</span>
+				<span className={className}>{user.number}</span>
 				<div className="infor">
-					<p>{name}</p>
-					<p>{userId}</p>
+					<p>{user.name}</p>
+					<p>{user.userId}</p>
 				</div>
-				<span className="ticket-number">{ticketNumber}</span>
+				<span className="ticket-number">{user.ticketNumber}</span>
 			</div>
 		);
 	}
